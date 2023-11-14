@@ -21,3 +21,38 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+.project-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project-card {
+    width: 300px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.project-card h3 {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.project-card p {
+    margin-top: 10px;
+    font-size: 0.9em;
+}
