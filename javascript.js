@@ -1,70 +1,75 @@
-const projectCard = document.querySelector(".project-card");
+const projectCards = document.querySelectorAll(".project-card");
 
-projectCard.addEventListener("mousemove", (e) => {
-    const { x, y } = projectCard.getBoundingClientRect();
-    projectCard.style.setProperty("--x", e.clientX - x);
-    projectCard.style.setProperty("--y", e.clientY - y);
+projectCards.forEach((projectCard) => {
+    projectCard.addEventListener("mousemove", (e) => {
+        const { x, y } = projectCard.getBoundingClientRect();
+        projectCard.style.setProperty("--x", e.clientX - x);
+        projectCard.style.setProperty("--y", e.clientY - y);
+    });
 });
 
 
-var container = document.querySelector(".container");
-var inner = document.querySelector(".inner");
+const containers = document.querySelectorAll('.container');
 
-var mouse = {
+for (const container of containers) {
+  const inner = container.querySelector('.inner');
+
+  const mouse = {
     _x: 0,
     _y: 0,
     x: 0,
     y: 0,
     updatePosition: function (event) {
-        var e = event || window.event;
-        this.x = e.clientX - this._x;
-        this.y = (e.clientY - this._y) * -1;
+      const e = event || window.event;
+      this.x = e.clientX - this._x;
+      this.y = (e.clientY - this._y) * -1;
     },
     setOrigin: function (e) {
-        this._x = e.offsetLeft + Math.floor(e.offsetWidth / 2);
-        this._y = e.offsetTop + Math.floor(e.offsetHeight / 2);
+      this._x = e.offsetLeft + Math.floor(e.offsetWidth / 2);
+      this._y = e.offsetTop + Math.floor(e.offsetHeight / 2);
     },
-};
+  };
 
-mouse.setOrigin(container);
+  mouse.setOrigin(container);
 
-var counter = 0;
-var updateRate = 10;
-var isTimeToUpdate = function () {
+  let counter = 0;
+  const updateRate = 10;
+  const isTimeToUpdate = function () {
     return counter++ % updateRate === 0;
-};
+  };
 
-var onMouseEnterHandler = function (event) {
+  const onMouseEnterHandler = function (event) {
     update(event);
-};
-var onMouseLeaveHandler = function () {
-    inner.style = "";
-};
-var onMouseMoveHandler = function (event) {
+  };
+  const onMouseLeaveHandler = function () {
+    inner.style = '';
+  };
+  const onMouseMoveHandler = function (event) {
     if (isTimeToUpdate()) {
-        update(event);
+      update(event);
     }
-};
+  };
 
-var update = function (event) {
+  const update = function (event) {
     mouse.updatePosition(event);
     updateTransformStyle(
-        (mouse.y / inner.offsetHeight / 2).toFixed(2),
-        (mouse.x / inner.offsetWidth / 2).toFixed(2)
+      (mouse.y / inner.offsetHeight / 2).toFixed(2),
+      (mouse.x / inner.offsetWidth / 2).toFixed(2)
     );
-};
+  };
 
-var updateTransformStyle = function (x, y) {
-    x = -x/2;
-    y = -2*y;
-    var style = "rotateX(" + x + "deg) rotateY(" + y + "deg)";
+  const updateTransformStyle = function (x, y) {
+    x = -x / 2;
+    y = -2 * y;
+    const style = `rotateX(${x}deg) rotateY(${y}deg)`;
     inner.style.transform = style;
     inner.style.webkitTransform = style;
     inner.style.mozTransform = style;
     inner.style.msTransform = style;
     inner.style.oTransform = style;
-};
+  };
 
-container.onmouseenter = onMouseEnterHandler;
-container.onmouseleave = onMouseLeaveHandler;
-container.onmousemove = onMouseMoveHandler;
+  container.onmouseenter = onMouseEnterHandler;
+  container.onmouseleave = onMouseLeaveHandler;
+  container.onmousemove = onMouseMoveHandler;
+}
