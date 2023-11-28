@@ -11,81 +11,272 @@
 
 <body>
     <header>
-        <h1>Welcome to My Portfolio Website</h1>
+        <div class="header-content">
+            <img src="favicon.ico" alt="Efai De Leon's Portfolio Logo" class="logo">
+            <a href="index.html">
+                <h1>Efai De Leon's Portfolio</h1>
+            </a>
+            <p>Front-end developer, experienced in HTML, CSS, and JavaScript. Passionate about creating user-friendly
+                and
+                responsive web applications.</p>
+            <a href="contact.html" class="btn btn-primary">Contact Me</a>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <h2>About Us</h2>
-        <p>This is a simple website created with HTML. It's a starting point for your web development journey.</p>
+        <h2>Github Repository</h2>
+        <iframe src="https://ghbtns.com/github-btn.html?user=Efai-De-Leon&repo=Portfolio&type=star&count=true"
+            frameborder="0" scrolling="0" width="170" height="20" title="GitHub"></iframe>
+        <section class="projects">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <div class="container">
+                    <article class="project-card small-card inner">
+                        <div class="project-content">
+                            <h3>Boat BasketBall Unity</h3>
+                            <div class="project-overview">
+                                <p>A 3D Unity game featuring boat characters playing basketball.
+                                    This project is a simple multiplayer game.
+                                    It utilizes C# for Unity and follows SOLID principles.
+                                    The project has resulted in better understanding of programming practices and better
+                                    code
+                                    maintainablity.
+                                </p>
+                            </div>
+                            <div class="project-info">
+                                <a href="https://github.com/Efai-De-Leon/Boat-BasketBall-Unity/tree/fb7c38f624a7e4710b0addc31d91eeeef189ecdb"
+                                    class="btn">Github Repository</a>
+                            </div>
+                        </div>
+                        <figure>
+                            <img src="boat-webp-animated.webp" alt="Boat BasketBall GIF">
+                        </figure>
+                    </article>
+                </div>
+                <article class="project-card project-card-tall">
+                    <img src="chat application c.gif" alt="Chat Application">
+                    <h3>Chat Application</h3>
+                    <p>A real-time chat application built using client-server architecture.</p>
+                    <div class="project-content">
+                        <div class="project-overview">
+                            <p>
+                                This project is a chat application built in a team of 4.
+                                It utilizes C programming and GTK library for the GUI.
+                                The project has resulted in better team management skills with Github and advanced C
+                                programming practices.
+                            </p>
+                        </div>
 
-        <h2>Contact Us</h2>
-        <p>Email: info@example.com</p>
+                        <ul class="project-info">
+                            <li><span>Technology:</span> C, GTK Library</li>
+                            <li><span>GitHub:</span> <a
+                                    href="https://github.com/Efai-De-Leon/Portfolio/tree/main/Chat%20Application"
+                                    class="btn btn-primary">View Project</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <img src="django webapplication.gif" alt="Django Web Application">
+                    <h3>Django Web Application</h3>
+                    <p>A web application developed using the Django Python framework.</p>
+                    <div class="project-content">
+                        <div class="project-overview">
+                            <p>
+                                This project is a web application that receives data from AWS and displays it on widgets
+                                and
+                                graphs.
+                                It utilizes HTML, CSS, Python, Django, AWS and elastic beanstalk.
+                                The project has resulted in better team management undestanding through Github and
+                                fundamentals for web design.
+                            </p>
+                        </div>
 
-        <h2>Projects</h2>
-        <div class="project-cards">
-            <div class="project-card" onclick="window.location.href='https://github.com/Efai-De-Leon/Boat-BasketBall-Unity/tree/fb7c38f624a7e4710b0addc31d91eeeef189ecdb'">
-                <img src="path/to/boat_basketball_image.jpg" alt="Boat BasketBall Unity">
-                <h3>Boat BasketBall Unity</h3>
-                <p>Description.</p>
+                        <ul class="project-info">
+                            <li><span>Technology:</span> HTML, CSS, JavaScript, Django, Python, AWS</li>
+                            <li><span>GitHub:</span> <a
+                                    href="https://github.com/Efai-De-Leon/Portfolio/tree/main/Django%20Website%20Application%20/src"
+                                    class="btn btn-primary">View Project</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <img src="edge detection.gif" alt="Edge Detection Program">
+                    <h3>Edge Detection Program</h3>
+                    <p>A program that detects edges in images using various algorithms.</p>
+                    <div class="project-content">
+                        <div class="project-overview">
+                            <p>
+                                This project is a program that implement machine vision techniques to analyze an image.
+                                It utilizes C and various algorithms to detect pixel intensity based on a given
+                                threshold.
+                                The project has resulted in better undestanding of how a computer interprets the content
+                                in
+                                an image and advanced C programming techniques.
+                            </p>
+                        </div>
+
+                        <ul class="project-info">
+                            <li><span>Technology:</span> C</li>
+                            <li><span>GitHub:</span> <a
+                                    href="https://github.com/Efai-De-Leon/Portfolio/tree/main/Edge%20Detection%20Program/src"
+                                    class="btn btn-primary">View Project</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <img src="layouts and schematics.gif" alt="Layout Schematics & Logic Gates">
+                    <h3>Layout Schematics & Logic Gates</h3>
+                    <p>Description.</p>
+                    <p>Layouts and schematics for various logic gates using the Virtuoso software.</p>
+                    <div class="project-content">
+                        <div class="project-overview">
+                            <p>
+                                This project is a compilation of 20+ electronic schematics such as multiplexers and
+                                counters.
+                                It utilizes Cadance software and standard cell techniques.
+                                The project has resulted in better undestanding of circuit design and complex electronic
+                                components.
+                            </p>
+                        </div>
+
+                        <ul class="project-info">
+                            <li><span>Technology:</span> Cadance Virtuoso</li>
+                            <li><span>GitHub:</span> <a
+                                    href="https://github.com/Efai-De-Leon/Portfolio/tree/main/Layout%20and%20Schematics%20of%20Logic%20Gates%20Virtuoso"
+                                    class="btn btn-primary">View Project</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <img src="thread scheduling.gif" alt="Thread Scheduling Program">
+                    <h3>Thread Scheduling Program</h3>
+                    <p>A program that schedules threads using various scheduling algorithms.</p>
+                    <div class="project-content">
+                        <div class="project-overview">
+                            <p>
+                                This project is a demonstration of using sheduling algorithm to solve the thread race
+                                condition.
+                                It utilizes C programming to implement FIFO, EDF, and RM scheduling.
+                                The project has resulted in better understaning of multi-thread programming and
+                                synchronization.
+                            </p>
+                        </div>
+
+                        <ul class="project-info">
+                            <li><span>Technology:</span> HTML, CSS, JavaScript</li>
+                            <li><span>GitHub:</span> <a
+                                    href="https://github.com/Efai-De-Leon/Portfolio/tree/main/Thread%20Scheduling%20Program"
+                                    class="btn btn-primary">View Project</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <img src="robot_scissors.gif" alt="Yarn Cutting Unity">
+                    <h3>Yarn Cutting Unity</h3>
+                    <p>A 3D Unity game where a robot cuts yarn using scissors.</p>
+                    <div class="project-content">
+                        <div class="project-overview">
+                            <p>
+                                This project is a single player 2.5D game.
+                                It utilizes C# and Unity to implement Special FX, 3D Rendered Graphics, Particles
+                                Systems,
+                                and Animations to improve the visual appeal.
+                                The project has resulted in better understanding accross all the different aspects of
+                                game
+                                design.
+                            </p>
+                        </div>
+
+                        <ul class="project-info">
+                            <li><span>Technology:</span> HTML, CSS, JavaScript</li>
+                            <li><span>GitHub:</span> <a
+                                    href="https://github.com/Efai-De-Leon/Yarn-Cutting-Unity/tree/358dc385f4020120f392f69015194d27d1d64d7a"
+                                    class="btn btn-primary">View Project</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="project-card project-card-tall">
+                    <img src="riscv code.gif" alt="Risc V">
+                    <h3>Risc V CPU</h3>
+                    <p>A RISC-V CPU designed using SystemVerilog.</p>
+                    <div class="project-content">
+                        <div class="project-overview">
+                            <p>
+                                This project is an implementation of a Pipeline RISC-V CPU with branch prediction.
+                                It utilizes SystemVerilog and Github for version control.
+                                The project has resulted in better undestanding of CPU design.
+                            </p>
+                        </div>
+
+                        <ul class="project-info">
+                            <li><span>Technology:</span> HTML, CSS, JavaScript</li>
+                            <li><span>GitHub:</span> <a
+                                    href="https://github.com/Efai-De-Leon/Portfolio/tree/main/SystemVerilog%20RISC-V%20CPU/src"
+                                    class="btn btn-primary">View Project</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <img src="multithread server client.gif" alt="multithread server">
+                    <h3>Multi-Threaded Simple Server</h3>
+                    <p>A multi-threaded web server that handles client requests efficiently.</p>
+                    <div class="project-content">
+                        <div class="project-overview">
+                            <p>
+                                This project is a server that reponds to a client request.
+                                It utilizes Python to implement a multi-thread server and a client.
+                                The project has resulted in better understanding in the lifetime of a web request.
+                            </p>
+                        </div>
+
+                        <ul class="project-info">
+                            <li><span>Technology:</span> HTML, CSS, JavaScript</li>
+                            <li><span>GitHub:</span> <a
+                                    href="https://github.com/Efai-De-Leon/Portfolio/tree/main/Multi-threaded%20web%20server%20and%20HTTP%20client/src"
+                                    class="btn btn-primary">View Project</a></li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <img src="cimis iot.gif" alt="Iot Circuit">
+                    <h3>IoT Python Program</h3>
+                    <p>A Python programs that receives IoT data from sensors and CIMIS API</p>
+                    <div class="project-content">
+                        <div class="project-overview">
+                            <p>
+                                This project is an IoT program catered to the agriculture sector.
+                                It utilizes Python and electronic components controlled by a Raspberry Pi.
+                                The project has resulted in better undesrstanding sensors to automize monitoring and
+                                motor
+                                processes.
+                            </p>
+                        </div>
+
+                        <ul class="project-info">
+                            <li><span>Technology:</span> Python, Raspberry Pi, Circuit</li>
+                            <li><span>GitHub:</span> <a
+                                    href="https://github.com/Efai-De-Leon/Portfolio/tree/main/Python%20Program%20for%20circuit%20wit%20IoT%20sensor"
+                                    class="btn btn-primary">View Project</a></li>
+                        </ul>
+                    </div>
+                </article>
             </div>
-            <div class="project-card" onclick="window.location.href='https://github.com/Efai-De-Leon/Portfolio/tree/main/Chat%20Application'">
-                <img src="path/to/boat_basketball_image.jpg" alt="Chat Application">
-                <h3>Chat Application</h3>
-                <p>Description.</p>
-            </div>
-            <div class="project-card" onclick="window.location.href='https://github.com/Efai-De-Leon/Portfolio/tree/main/Django%20Website%20Application%20/src'">
-                <img src="path/to/boat_basketball_image.jpg" alt="Django Web Application">
-                <h3>Django Web Application</h3>
-                <p>Description.</p>
-            </div>
-            <div class="project-card" onclick="window.location.href='https://github.com/Efai-De-Leon/Portfolio/tree/main/Edge%20Detection%20Program/src'">
-                <img src="path/to/boat_basketball_image.jpg" alt="Edge Detection Program">
-                <h3>Edge Detection Program</h3>
-                <p>Description.</p>
-            </div>
-            <div class="project-card" onclick="window.location.href='https://github.com/Efai-De-Leon/Portfolio/tree/main/Gallery%20Website%20and%20Database(MySQL)%20Programming/src'">
-                <img src="path/to/boat_basketball_image.jpg" alt="Gallery Website Database">
-                <h3>Gallery Website Database</h3>
-                <p>Description.</p>
-            </div>
-            <div class="project-card" onclick="window.location.href='https://github.com/Efai-De-Leon/Portfolio/tree/main/Java%20Application%20-%20Android%20Studio/src'">
-                <img src="path/to/boat_basketball_image.jpg" alt="Java Applications">
-                <h3>Java Applications</h3>
-                <p>Description.</p>
-            </div>
-            <div class="project-card" onclick="window.location.href='https://github.com/Efai-De-Leon/Portfolio/tree/main/Layout%20and%20Schematics%20of%20Logic%20Gates%20Virtuoso'">
-                <img src="path/to/boat_basketball_image.jpg" alt="Layout Schematics & Logic Gates">
-                <h3>Layout Schematics & Logic Gates</h3>
-                <p>Description.</p>
-            </div>
-            <div class="project-card" onclick="window.location.href='https://github.com/Efai-De-Leon/Portfolio/tree/main/Multi-threaded%20web%20server%20and%20HTTP%20client/src'">
-                <img src="path/to/boat_basketball_image.jpg" alt="Multi-Threaded Web Server and Client">
-                <h3>Multi-Threaded Web Server and Client</h3>
-                <p>Description.</p>
-            </div>
-            <div class="project-card" onclick="window.location.href='https://github.com/Efai-De-Leon/Portfolio/tree/main/Python%20Program%20for%20circuit%20wit%20IoT%20sensor/src'">
-                <img src="path/to/boat_basketball_image.jpg" alt="IoT Python Program">
-                <h3>IoT Python Program</h3>
-                <p>Description.</p>
-            </div>
-            <div class="project-card" onclick="window.location.href='https://github.com/Efai-De-Leon/Portfolio/tree/main/Thread%20Scheduling%20Program'">
-                <img src="path/to/boat_basketball_image.jpg" alt="Thread Scheduling Program">
-                <h3>Thread Scheduling Program</h3>
-                <p>Description.</p>
-            </div>
-            <div class="project-card" onclick="window.location.href='https://github.com/Efai-De-Leon/Yarn-Cutting-Unity/tree/358dc385f4020120f392f69015194d27d1d64d7a'">
-                <img src="path/to/boat_basketball_image.jpg" alt="Yarn Cutting Unity">
-                <h3>Yarn Cutting Unity</h3>
-                <p>Description.</p>
-            </div>
-            <!-- Repeat the above structure for each project -->
-        </div>
+        </section>
     </main>
-
     <footer>
         <p>&copy; 2023 My Portfolio Website. All rights reserved.</p>
     </footer>
 
+    <script src="javascript.js"></script>
 </body>
 
 </html>
