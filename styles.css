@@ -6,7 +6,7 @@
     font-weight: 200 900;
     font-stretch: 75% 125%;
 }
-
+/*Global styles*/
 body {
     font-family: 'Mona Sans';
     margin: 0;
@@ -14,19 +14,12 @@ body {
     background: rgb(13, 17, 23);
 }
 
-a {
-    text-decoration: none;
-    color: #000;
-}
-
-h1, h2, h3, p {
-    margin: 0 0 15px;
-}
-
 ul {
     list-style: none;
     padding: 0;
 }
+
+/* Header styles */
 
 header {
     position: relative;
@@ -58,12 +51,24 @@ header {
     margin-bottom: 0;
 }
 
+.header-content h1 {
+    margin: 0 0 15px; 
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0 0 10px;
+}
+
 .header-content p {
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 20px;
 }
 
+.github-repo h2 {
+    margin: 0 0 15px;
+}
+
+/* Navbar Styles */
 .navbar {
     background-color: #007bff;
     color: #fff;
@@ -114,7 +119,7 @@ img.logo {
     height: auto;
 }
 
-.btn-primary {
+.contactme-button {
     padding: 10px 20px;
     background-color: #007bff;
     color: #fff;
@@ -123,19 +128,9 @@ img.logo {
     font-size: 16px;
     font-weight: bold;
     text-transform: uppercase;
-    margin-left: auto;
-}
-
-h1 {
-    font-size: 28px;
-    font-weight: bold;
-    margin: 0 0 10px;
-}
-
-p {
-    font-size: 16px;
-    line-height: 1.5;
-    margin: 0 0 20px;
+    display: block;
+    text-align: left;
+    margin: 10px 0 0;
 }
 
 ul li {
@@ -246,11 +241,7 @@ footer {
     z-index: 1;
 }
 
-.project-card figure .btn {
-    border: none;
-}
-
-.project-card h3 {
+.project-content h3 {
     font-size: 23px;
     font-weight: bold;
     margin: 10px 0;
@@ -261,7 +252,6 @@ footer {
 
 .project-card p {
     font-size: 23px;
-    line-height: 20px;
     padding: 0 15px;
     margin: 10px 0;
     line-height: 30px;
@@ -288,6 +278,7 @@ footer {
     z-index: 1;
     color: rgb(129, 136, 145); 
     font-weight: 600;
+    margin: 0 0 15px;  
 }
 
 .project-card .project-info {
@@ -296,10 +287,10 @@ footer {
     color: black;
 }
 
-
 .project-info a {
     border: none;
     font-size: 23px;
+    text-decoration: none;
 }
 
 .btn {
