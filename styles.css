@@ -66,6 +66,7 @@ header {
 
 .github-repo h2 {
     margin: 0 0 15px;
+    color: white;
 }
 
 /* Navbar Styles */
@@ -210,7 +211,7 @@ footer {
     width: 1000px;
     height: 1000px;
     clip-path: circle(50% at center);
-    background: radial-gradient(circle at 50% 50%, rgba(74, 24, 47, 0.748) 10%, rgba(50, 17, 32, 0.0) 70%); 
+    background: radial-gradient(circle at 50% 50%, rgba(33, 61, 203, 0.882) 10%, rgba(24, 17, 122, 0) 70%); 
 
     opacity: 0;
     transition: opacity 0.2s;
@@ -259,7 +260,7 @@ footer {
 }
 
 .container{
-    perspective: 300px;
+    perspective: 250px;
     max-width: 500px;
     height: 700px;
 }
