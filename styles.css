@@ -1,17 +1,19 @@
 @font-face {
     font-family: 'Mona Sans';
     src:
-      url('Mona\ Sans/Mona-Sans.woff2') format('woff2 supports variations'),
-      url('Mona\ Sans/Mona-Sans.woff2') format('woff2-variations');
+        url('Mona\ Sans/Mona-Sans.woff2') format('woff2 supports variations'),
+        url('Mona\ Sans/Mona-Sans.woff2') format('woff2-variations');
     font-weight: 200 900;
     font-stretch: 75% 125%;
 }
+
 /*Global styles*/
 body {
     font-family: 'Mona Sans';
     margin: 0;
     padding: 0;
     background: rgb(13, 17, 23);
+    /* background: white; */
 }
 
 ul {
@@ -19,15 +21,16 @@ ul {
     padding: 0;
 }
 
-/* Header styles */
-
+/* Header Styles */
 header {
     position: relative;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #007bff;
-    color: #fff;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 1) 0%,
+            rgba(0, 0, 0, 0) 100%);
+    color: white;
     padding: 20px 0;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -36,110 +39,95 @@ header {
 }
 
 .header-content {
-    text-align: center;
-    background-color: #fff;
-    color: #333;  
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
 }
 
 .header-content img.logo {
-    width: 150px;
+    width: 80px;
     height: auto;
     margin-bottom: 0;
 }
 
 .header-content h1 {
-    margin: 0 0 15px; 
-    font-size: 28px;
+    margin: 0 0 15px;
+    font-size: 24px;
     font-weight: bold;
-    margin: 0 0 10px;
+    color: white;
+    text-decoration: none;
 }
 
 .header-content p {
-    font-size: 18px;
-    line-height: 24px;
-    margin-bottom: 20px;
-}
-
-.github-repo h2 {
-    margin: 0 0 15px;
-    color: white;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 10px;
 }
 
 /* Navbar Styles */
 .navbar {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
+    background-color: transparent;
+    /* Make the navbar background transparent */
+    color: white;
+    padding: 0 20px;
+    /* Remove padding to reduce clutter */
     display: flex;
     justify-content: space-between;
+    /* Maintain spacing between elements */
     align-items: center;
+    width: 100%;
 }
 
 .navbar ul {
-    display: flex;
     list-style: none;
+    /* Remove default list style */
     margin: 0;
     padding: 0;
+    display: flex;
+    align-items: center;
 }
 
 .navbar ul li {
-    margin: 0 10px;
-    padding: 10px 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    /* Increase spacing between navigation links */
+    display: inline-block;
+    margin: 0 20px;
+    padding: 5px 10px;
+    background-color: transparent;
+    border-radius: 0;
     font-size: 16px;
-    font-weight: bold;
-    text-decoration: none;
-    color: #333;
+    font-weight: 600;
 }
 
 .navbar ul li a {
     text-decoration: none;
-    color: #333;
-    font-size: 18px;
-    background-color: transparent;
-    font-weight: bold;
-    border: none;
-    outline: none;
-    padding: 0 10px;
+    color: white;
+    /* Maintain white text color for navbar */
+    font-size: 16px;
+    font-weight: 600;
 }
 
 .navbar ul li a:hover {
-    background-color: #eee;
-    color: #007bff;
-    border-color: #007bff;
-    margin: 0;
+    /* Use a subtle hover effect */
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Semi-transparent white background */
+    color: white;
 }
 
-img.logo {
-    width: 120px;
-    height: auto;
+.github-repo {
+    color: white;
 }
 
 .contactme-button {
-    padding: 10px 20px;
-    background-color: #007bff;
+    /* Maintain the contact me button style */
+    padding: 5px 20px;
     color: #fff;
-    border: 1px solid #007bff;
-    border-radius: 4px;
-    font-size: 16px;
-    font-weight: bold;
-    text-transform: uppercase;
+    border: none;
+    border-radius: 0;
+    font-size: 14px;
+    font-weight: 600;
     display: block;
     text-align: left;
-    margin: 10px 0 0;
-}
-
-ul li {
-    display: inline-block;
-    margin: 0 10px;
-    padding: 10px;
-    background-color: #fff;
-    border-radius: 5px;
+    margin: 10px 10px 0;
+    text-decoration: none;
 }
 
 main {
@@ -158,13 +146,13 @@ footer {
 
 @media (max-width: 768px) {
     header {
-      width: 100%;
+        width: 100%;
     }
-  
+
     .navbar {
-      width: 100%;
+        width: 100%;
     }
-  }
+}
 
 /* Projects section styles */
 
@@ -182,7 +170,7 @@ footer {
 
 }
 
-.small-card{
+.small-card {
     height: 700px;
 }
 
@@ -203,7 +191,7 @@ footer {
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
-.project-card::after{
+.project-card::after {
     content: "";
     position: absolute;
     top: calc(var(--y) * 1px - 500px);
@@ -211,7 +199,7 @@ footer {
     width: 1000px;
     height: 1000px;
     clip-path: circle(50% at center);
-    background: radial-gradient(circle at 50% 50%, rgba(33, 61, 203, 0.882) 10%, rgba(24, 17, 122, 0) 70%); 
+    background: radial-gradient(circle at 50% 50%, rgba(33, 61, 203, 0.882) 10%, rgba(24, 17, 122, 0) 70%);
 
     opacity: 0;
     transition: opacity 0.2s;
@@ -228,7 +216,7 @@ footer {
     width: 100%;
     margin: 0;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
 }
 
@@ -236,7 +224,7 @@ footer {
     max-width: 100%;
     height: 200px;
     object-fit: cover;
-    border-radius: 10px 10px 0 0; 
+    border-radius: 10px 10px 0 0;
     border: 0.3px solid rgba(57, 59, 61, 0.704);
     box-shadow: 0 0 0.5px rgba(255, 255, 255, 0.87);
     z-index: 1;
@@ -259,7 +247,7 @@ footer {
     z-index: 1;
 }
 
-.container{
+.container {
     perspective: 250px;
     max-width: 500px;
     height: 700px;
@@ -277,9 +265,9 @@ footer {
 
 .project-overview p {
     z-index: 1;
-    color: rgb(129, 136, 145); 
+    color: rgb(129, 136, 145);
     font-weight: 600;
-    margin: 0 0 15px;  
+    margin: 0 0 15px;
 }
 
 .project-card .project-info {
@@ -303,6 +291,3 @@ footer {
     font-weight: bold;
     margin: 10px 0 0;
 }
-
-  
-
