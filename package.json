@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Efai-De-Leon.github.io/Portfolio-Website/",
+  "homepage": "https://efai-de-leon.github.io/Portfolio-Website/",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
