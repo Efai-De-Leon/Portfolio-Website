@@ -1,3 +1,4 @@
+import React from 'react'
 import './ProjectCardStyles.css'
 import { Card, CardProps } from './Card'
 import { useRef } from 'react'

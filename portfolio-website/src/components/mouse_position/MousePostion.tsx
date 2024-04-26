@@ -1,3 +1,4 @@
+import React from "react";
 import { IMousePosition } from "./IMousePosition";
 
 export const MousePosition: IMousePosition = {

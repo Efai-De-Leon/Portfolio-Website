@@ -1,3 +1,4 @@
+import React from 'react'
 import { Card, CardProps } from '../project_card/Card'
 
 export type CardGalleryProps = {

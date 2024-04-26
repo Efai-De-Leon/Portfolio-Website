@@ -1,6 +1,7 @@
 import { MousePosition } from "../mouse_position/MousePostion";
 import { BlurEffectParams } from "./BlurEffectParams";
 import { useEffect } from "react";
+import React from "react";
 
 
 export function useCircleBlurEffect({containerRef, innerRef}: BlurEffectParams) {

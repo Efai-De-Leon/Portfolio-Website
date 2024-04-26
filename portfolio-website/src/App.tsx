@@ -5,6 +5,7 @@ import { Home } from "./components/home/Home"
 import { Contact } from "./components/contact/Contact"
 import { useFetchCSVData } from './components/fetch_csv_data/useFetchCSVData'
 import { CardProps } from './components/project_card/Card'
+import React from 'react'
 
 function App() {
   const { data, loading, error } = useFetchCSVData<CardProps>("github_portfolio.csv");
