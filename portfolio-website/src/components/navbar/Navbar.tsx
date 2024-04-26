@@ -2,8 +2,8 @@ import { NavLink } from "react-router-dom";
 import "./NavbarStyles.css";
 
 const navLinks = [
-    { path: "/", title: "Home" },
-    { path: "/contact", title: "Contact" },
+    { path: "/Portfolio-Website/", title: "Home" },
+    { path: "/contact/", title: "Contact" },
 ];
 
 export const Navbar = () => {

@@ -22,7 +22,7 @@ export const ProjectCard: Card = ({title, description, image, link}: CardProps) 
                     </div>
                 </div>
                 <figure>
-                    <img src={image} alt="Not Found" />
+                    <img src={"portfolio-website/src/assets/" + image} alt="Not Found" />
                 </figure>
             </article>
         </div>
