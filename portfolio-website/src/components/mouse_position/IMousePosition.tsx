@@ -1,5 +1,3 @@
-import React from "react";
-
 export interface IMousePosition {
     _x: number;
     _y: number;

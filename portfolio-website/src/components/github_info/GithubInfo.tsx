@@ -1,5 +1,4 @@
 import "./GithubInfoStyles.css"
-import React from "react"
 
 export const GithubInfo = () => {
     return (

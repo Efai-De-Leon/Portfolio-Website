@@ -1,4 +1,3 @@
-import React from 'react';
 import * as Papa from 'papaparse';
 import { useState, useEffect } from 'react';
 
