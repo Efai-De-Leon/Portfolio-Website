@@ -101,7 +101,7 @@
     color: black;
 }
 
-.project-info a {
+.project-card-link {
     border: none;
     font-size: 23px;
     text-decoration: none;
