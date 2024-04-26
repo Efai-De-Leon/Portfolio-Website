@@ -5,5 +5,5 @@ import react from '@vitejs/plugin-react-swc'
 export default defineConfig({
   plugins: [react()],
   assetsInclude: ['**/*.png', '**/*.svg', '**/*.jpg', '**/*.jpeg', '**/*.gif', '**/*.webp', `**/*.woff`, `**/*.woff2`, `**/*.eot`, `**/*.ttf`, `**/*.otf`],
-  base: "/portfolio-website/",
+  base: "/Portfolio-Website/",
 })
