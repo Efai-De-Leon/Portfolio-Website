@@ -1,20 +1,34 @@
 import { NavLink } from "react-router-dom";
 import "./NavbarStyles.css";
+import { Link } from "react-router-dom";
 
-const navLinks = [
-    { path: "/Portfolio-Website/", title: "Home" },
-    { path: "/contact/", title: "Contact" },
-];
+type NavbarProps = {
+    title: string;
+    navLinks: {
+        path: string;
+        title: string;
+    }[];
+};
 
-export const Navbar = () => {
+/**
+ * Navbar component
+ *   
+ * @param title - title of the website 
+ * @param navLinks - array of objects containing path and title of each link
+ * @returns 
+ */
+
+export const Navbar = ({ title, navLinks }: NavbarProps) => {
+    const homeLink = navLinks.find((link) => link.title === "Home")
+
     return (
         <header>
             <div className="header-content">
-                <a href="index.html">
+                <Link to={homeLink ? homeLink.path : "/"}>
                     <div className="website-title">
-                        <h1>Efai De Leon's Portfolio</h1>
+                        <h1>{title}</h1>
                     </div>
-                </a>
+                </Link>
             </div>
             <nav className="navbar">
                 <ul>
@@ -22,7 +36,7 @@ export const Navbar = () => {
                         <li key={link.path}>
                             <NavLink
                                 to={link.path}
-                                className={({ isActive }) => (isActive ? "active" : "")} // Conditional styling for active link
+                                className={({ isActive }) => (isActive ? "active" : "")}
                             >
                                 {link.title}
                             </NavLink>

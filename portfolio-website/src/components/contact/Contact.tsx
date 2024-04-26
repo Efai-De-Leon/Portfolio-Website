@@ -1,12 +1,27 @@
 import "./ContactStyles.css"
 
-export const Contact = () => {
+export type ContactProps = {
+    name: string
+    email: string
+    phone: string
+}
+
+
+/**
+ * Contact Page 
+ * 
+ * @param name 
+ * @param email 
+ * @param phone 
+ * @returns 
+ */
+export const Contact = ({name, email, phone}: ContactProps) => {
     return (
         <div className="contact-info">
             <h1>Contact Information</h1>
-            <p><strong>Name:</strong> Efai De Leon</p>
-            <p><strong>Email:</strong> efaideleon@gmail.com</p>
-            <p><strong>Phone:</strong> +1 310-773-2645</p>
+            <p><strong>Name:</strong> {name}</p>
+            <p><strong>Email:</strong> {email}</p>
+            <p><strong>Phone:</strong> {phone}</p>
         </div>
     )
 }
