@@ -1,11 +1,11 @@
 import { MousePosition } from "../mouse_position/MousePostion";
 import { BlurEffectParams } from "./BlurEffectParams";
 import { useEffect } from "react";
-export function useCircleBlurEffect({containerRef, innerRef}: BlurEffectParams) {
+export function useCircleBlurEffect({ containerRef, innerRef }: BlurEffectParams) {
     const mouse = MousePosition;
 
     useEffect(() => {
-        const container: HTMLDivElement | null= containerRef.current;
+        const container: HTMLDivElement | null = containerRef.current;
         const inner: HTMLDivElement | null = innerRef.current;
 
         if (!container || !inner) return;
@@ -35,8 +35,8 @@ export function useCircleBlurEffect({containerRef, innerRef}: BlurEffectParams) 
         const update = function (event: MouseEvent) {
             mouse.updatePosition(event);
             updateTransformStyle(
-                (mouse.y / inner.offsetHeight / 2).toFixed(2),
-                (mouse.x / inner.offsetWidth / 2).toFixed(2)
+                (mouse.y / inner.offsetHeight / 2), /* Thie .toFixed is causing performance issues */
+                (mouse.x / inner.offsetWidth / 2)
             );
         };
 
@@ -46,10 +46,16 @@ export function useCircleBlurEffect({containerRef, innerRef}: BlurEffectParams) 
             inner.style.setProperty("--y", `${event.clientY - y}`);
         }
 
-        const updateTransformStyle = function (x: string, y: string) {
-            const numX = -parseFloat(x) / 2;
-            const numY = -2 * parseFloat(y);
-            inner.style.transform = `rotateX(${numX}deg) rotateY(${numY}deg)`;
+        const updateTransformStyle = function (x: number, y: number) {
+            const numX = -x * 50;
+            const numY = -y * 100;
+
+            const roundedX = (numX + (numX > 0 ? 0.5 : -0.5)) | 0;
+            const roundedY = (numY + (numY > 0 ? 0.5 : -0.5)) | 0;
+
+            const finalX = roundedX / 50;
+            const finalY = roundedY / 100;
+            inner.style.transform = `rotateX(${finalX}deg) rotateY(${finalY}deg)`;
         };
 
         container.addEventListener('mouseenter', onMouseEnterHandler);
