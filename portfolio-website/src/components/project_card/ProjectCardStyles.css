@@ -80,7 +80,6 @@
 .inner {
     z-index: 1;
     will-change: transform;
-    transition: transform 0.2s;
 }
 
 .project-content {
@@ -107,12 +106,17 @@
     text-decoration: none;
 }
 
-.btn {
-    display: block;
-    padding: 10px 20px;
-    color: #fff;
-    border-radius: 5px;
-    text-align: left;
-    font-weight: bold;
-    margin: 10px 0 0;
+.project-info {
+    font-size: 30px;
+}
+
+.material-symbols-outlined {
+    font-size: 30px;
+    position: relative;
+    bottom: -5px;
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 1000,
+        'GRAD' 0,
+        'opsz' 24
 }

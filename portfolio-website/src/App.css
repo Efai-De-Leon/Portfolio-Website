@@ -11,7 +11,9 @@ body {
     font-family: 'Mona Sans';
     margin: 0;
     padding: 0;
-    background: rgb(13, 17, 23);
+    /* background: rgb(13, 17, 23); */
+    /* background: rgb(115, 120, 140); */
+    background: #22324e;
 }
 
 ul {

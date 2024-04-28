@@ -2,6 +2,7 @@ import './ProjectCardStyles.css'
 import { Card, CardProps } from './Card'
 import { CSSProperties, MouseEventHandler, useRef } from 'react'
 import { motion, useMotionValue, useTransform } from 'framer-motion'
+import { LinkWithUnderline } from './LinkWithUnderline'
 
 export const ProjectCard: Card = ({ title, description, image, link }: CardProps) => {
 
@@ -16,7 +17,6 @@ export const ProjectCard: Card = ({ title, description, image, link }: CardProps
 
     const containerRef = useRef<HTMLDivElement>(null)
     const innerRef = useRef<HTMLDivElement>(null)
-
 
     const handleMouseMove: MouseEventHandler<HTMLDivElement> = (event: React.MouseEvent<HTMLDivElement>) => {
         if (!innerRef.current) return
@@ -37,44 +37,41 @@ export const ProjectCard: Card = ({ title, description, image, link }: CardProps
     }
 
     return (
-        <a href={link} className="project-card-link">
-            <motion.div
-                ref={containerRef}
-                className="container"
-                whileHover="hover"
+        <motion.div
+            ref={containerRef}
+            className="container"
+            whileHover="hover"
+            style={{
+                rotateX,
+                rotateY,
+            }}
+        >
+            <motion.article
+                ref={innerRef}
+                className="project-card small-card inner"
+                onMouseMove={handleMouseMove}
+                onMouseLeave={handleMouseLeave}
                 style={{
                     rotateX,
                     rotateY,
-                }}
+                    '--x': colorX,
+                    '--y': colorY
+                } as CSSProperties}
             >
-                <motion.article
-                    ref={innerRef}
-                    className="project-card small-card inner"
-                    onMouseMove={handleMouseMove}
-                    onMouseLeave={handleMouseLeave}
-                    style={{ 
-                        rotateX,
-                        rotateY,
-                        '--x': colorX,
-                        '--y': colorY
-                     } as CSSProperties}
-                >
-                    <div className="project-content">
-                        <h3>{title}</h3>
-                        <div className="project-overview">
-                            <p> {description} </p>
-                        </div>
-                        <div className="project-info">
-                            <a href={link}
-                                className="btn">Github Repository</a>
-                        </div>
+                <div className="project-content">
+                    <h3>{title}</h3>
+                    <div className="project-overview">
+                        <p> {description} </p>
                     </div>
+                    <div className="project-info">
+                        <LinkWithUnderline href={link}>Github Repo</LinkWithUnderline>
+                    </div>
+                </div>
 
-                    <figure>
-                        <img src={"./assets/" + image} alt="Not Found" />
-                    </figure>
-                </motion.article>
-            </motion.div>
-        </a>
+                <figure>
+                    <img src={"./assets/" + image} alt="Not Found" />
+                </figure>
+            </motion.article>
+        </motion.div>
     )
 }
