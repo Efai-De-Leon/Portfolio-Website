@@ -3,6 +3,7 @@ import { v4 as uuidv4 } from "uuid"
 import "./ProjectCardGalleryStyles.css"
 
 export const ProjectCardGallery: CardGallery = ({ cardsData, Card }: CardGalleryProps) => {
+
     return (
         <section className="projects">
             <h2>Projects</h2>

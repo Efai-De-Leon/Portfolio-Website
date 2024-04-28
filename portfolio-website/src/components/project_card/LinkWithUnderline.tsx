@@ -16,9 +16,10 @@ export const LinkWithUnderline = ({ href, children }: LinkProps) => {
             href={href}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
-            style={{ textDecoration: "none", color: "white", fontWeight: "bold" }}
+            style={{ textDecoration: "none", color: "white", fontWeight: "bold", display: "inline-block"}}
         >
             {children}
+
             {isHovered ? (
                 <motion.span
                     className="material-symbols-outlined"
@@ -36,6 +37,7 @@ export const LinkWithUnderline = ({ href, children }: LinkProps) => {
                     chevron_right
                 </motion.span>
             )}
+            
             <Underline isHovered={isHovered} />
         </a>
     );

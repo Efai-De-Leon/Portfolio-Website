@@ -10,7 +10,7 @@ export const Underline = ({isHovered}: UnderlineProps) => {
         <motion.div
             initial={{ width: 0 }}
             animate={{
-                width: isHovered ? "39.5%" : 0,
+                width: isHovered ? "100%" : 0,
                 transition: { duration: 0.3, ease: "easeOut" },
             }}
             style={{

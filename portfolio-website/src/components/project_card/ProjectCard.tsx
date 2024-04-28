@@ -1,7 +1,7 @@
 import './ProjectCardStyles.css'
 import { Card, CardProps } from './Card'
 import { CSSProperties, MouseEventHandler, useRef } from 'react'
-import { motion, useMotionValue, useTransform } from 'framer-motion'
+import { motion, useMotionValue, useTransform, useInView } from 'framer-motion'
 import { LinkWithUnderline } from './LinkWithUnderline'
 
 export const ProjectCard: Card = ({ title, description, image, link }: CardProps) => {
@@ -37,6 +37,7 @@ export const ProjectCard: Card = ({ title, description, image, link }: CardProps
     }
 
     return (
+
         <motion.div
             ref={containerRef}
             className="container"
@@ -46,6 +47,7 @@ export const ProjectCard: Card = ({ title, description, image, link }: CardProps
                 rotateY,
             }}
         >
+
             <motion.article
                 ref={innerRef}
                 className="project-card small-card inner"
@@ -58,6 +60,7 @@ export const ProjectCard: Card = ({ title, description, image, link }: CardProps
                     '--y': colorY
                 } as CSSProperties}
             >
+                
                 <div className="project-content">
                     <h3>{title}</h3>
                     <div className="project-overview">
@@ -71,7 +74,9 @@ export const ProjectCard: Card = ({ title, description, image, link }: CardProps
                 <figure>
                     <img src={"./assets/" + image} alt="Not Found" />
                 </figure>
+
             </motion.article>
+
         </motion.div>
     )
 }
