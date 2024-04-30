@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Underline } from "./Underline";
-import { motion } from "framer-motion";
 
 type LinkProps = {
     href: string;
@@ -21,21 +20,13 @@ export const LinkWithUnderline = ({ href, children }: LinkProps) => {
             {children}
 
             {isHovered ? (
-                <motion.span
-                    className="material-symbols-outlined"
-                    key="arrow_forward"
-                    whileHover={{ opacity: 1 }}
-                >
+                <span className="material-symbols-outlined" key="arrow_forward">
                     arrow_forward
-                </motion.span>
+                </span>
             ) : (
-                <motion.span
-                    className="material-symbols-outlined"
-                    key="chvron_right"
-                    whileHover={{ opacity: 0 }}
-                >
+                <span className="material-symbols-outlined" key="chvron_right">
                     chevron_right
-                </motion.span>
+                </span>
             )}
             
             <Underline isHovered={isHovered} />

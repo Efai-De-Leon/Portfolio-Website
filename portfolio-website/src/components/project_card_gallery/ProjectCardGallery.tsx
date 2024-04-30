@@ -9,7 +9,7 @@ export const ProjectCardGallery: CardGallery = ({ cardsData, Card }: CardGallery
             <h2>Projects</h2>
             <div className="project-grid">
                 {cardsData.map((item) => (
-                    <Card key={uuidv4()} title={item.title} description={item.description} image={item.image} link={item.link} />
+                    <Card key={uuidv4()} title={item.title} description={item.description} image={item.image} link={item.link} keywords={item.keywords}/>
                 ))}
             </div>
         </section>

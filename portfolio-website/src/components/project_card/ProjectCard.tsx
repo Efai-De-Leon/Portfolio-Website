@@ -3,8 +3,10 @@ import { Card, CardProps } from './Card'
 import { CSSProperties, MouseEventHandler, useRef } from 'react'
 import { motion, useMotionValue, useTransform } from 'framer-motion'
 import { LinkWithUnderline } from './LinkWithUnderline'
+import { HighlightKeywords } from '../hightlight_keywords/HightLightKeywords'
+import { useState } from 'react'
 
-export const ProjectCard: Card = ({ title, description, image, link }: CardProps) => {
+export const ProjectCard: Card = ({ title, description, image, link, keywords }: CardProps) => {
 
     const x = useMotionValue(0)
     const y = useMotionValue(0)
@@ -36,16 +38,18 @@ export const ProjectCard: Card = ({ title, description, image, link }: CardProps
         y.set(0);
     }
 
+    const [isHovered, setIsHovered] = useState(false)
+
+
     return (
 
         <motion.div
             ref={containerRef}
             className="container"
             whileHover="hover"
-            style={{
-                rotateX,
-                rotateY,
-            }}
+            style={{ rotateX, rotateY, }}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
         >
 
             <motion.article
@@ -64,7 +68,7 @@ export const ProjectCard: Card = ({ title, description, image, link }: CardProps
                 <div className="project-content">
                     <h3>{title}</h3>
                     <div className="project-overview">
-                        <p> {description} </p>
+                        <HighlightKeywords isHovered={isHovered} keywords={keywords} text={description}/>
                     </div>
                     <div className="project-info">
                         <LinkWithUnderline href={link}>Github Repo</LinkWithUnderline>
