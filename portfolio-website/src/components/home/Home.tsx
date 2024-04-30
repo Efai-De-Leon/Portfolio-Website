@@ -5,7 +5,7 @@ import { GithubInfo } from '../github_info/GithubInfo';
 
 type HomeProps = {
     data: CardProps[];
-}
+};
 
 export const Home = ({ data: cardsData }: HomeProps) => {
     return (

@@ -6,7 +6,6 @@ type LinkProps = {
     children: React.ReactNode;
 };
 
-
 export const LinkWithUnderline = ({ href, children }: LinkProps) => {
     const [isHovered, setIsHovered] = useState(false);
 
@@ -18,7 +17,6 @@ export const LinkWithUnderline = ({ href, children }: LinkProps) => {
             style={{ textDecoration: "none", color: "white", fontWeight: "bold", display: "inline-block"}}
         >
             {children}
-
             {isHovered ? (
                 <span className="material-symbols-outlined" key="arrow_forward">
                     arrow_forward
@@ -28,7 +26,6 @@ export const LinkWithUnderline = ({ href, children }: LinkProps) => {
                     chevron_right
                 </span>
             )}
-            
             <Underline isHovered={isHovered} />
         </a>
     );

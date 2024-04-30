@@ -1,19 +1,18 @@
 import "./ContactStyles.css"
 
 export type ContactProps = {
-    name: string
-    email: string
-    phone: string
+    name: string;
+    email: string;
+    phone: string;
 }
 
-
 /**
- * Contact Page 
- * 
- * @param name 
- * @param email 
- * @param phone 
- * @returns 
+ * Contact Page
+ *
+ * @param name
+ * @param email
+ * @param phone
+ * @returns
  */
 export const Contact = ({name, email, phone}: ContactProps) => {
     return (

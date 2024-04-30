@@ -12,14 +12,14 @@ type NavbarProps = {
 
 /**
  * Navbar component
- *   
- * @param title - title of the website 
+ *
+ * @param title - title of the website
  * @param navLinks - array of objects containing path and title of each link
- * @returns 
+ * @returns
  */
 
 export const Navbar = ({ title, navLinks }: NavbarProps) => {
-    const homeLink = navLinks.find((link) => link.title === "Home")
+    const homeLink = navLinks.find((link) => link.title === "Home");
 
     return (
         <header>
