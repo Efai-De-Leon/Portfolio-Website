@@ -14,7 +14,12 @@ export const LinkWithUnderline = ({ href, children }: LinkProps) => {
             href={href}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
-            style={{ textDecoration: "none", color: "white", fontWeight: "bold", display: "inline-block"}}
+            style={{
+                textDecoration: "none",
+                color: "white",
+                fontWeight: "bold",
+                display: "inline-block",
+            }}
         >
             {children}
             {isHovered ? (

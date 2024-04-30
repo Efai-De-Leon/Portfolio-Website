@@ -4,8 +4,7 @@ type UnderlineProps = {
     isHovered: boolean;
 };
 
-
-export const Underline = ({isHovered}: UnderlineProps) => {
+export const Underline = ({ isHovered }: UnderlineProps) => {
     return (
         <motion.div
             initial={{ width: 0 }}

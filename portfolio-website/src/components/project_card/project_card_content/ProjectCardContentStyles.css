@@ -1,0 +1,21 @@
+.project-content {
+    padding: 40px 40px 0px 40px;
+    z-index: 1;
+}
+
+.project-overview p {
+    z-index: 1;
+    color: rgb(129, 136, 145);
+    font-weight: 600;
+    margin: 0 0 15px;
+}
+
+.project-card .project-info {
+    margin: 0;
+    list-style: none;
+    color: black;
+}
+
+.project-info {
+    font-size: 30px;
+}
