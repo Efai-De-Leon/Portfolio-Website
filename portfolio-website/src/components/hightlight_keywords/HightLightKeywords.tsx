@@ -7,6 +7,8 @@ type HighlightKeywordsProps = {
 }
 
 export const HighlightKeywords = ({ isHovered, keywords, text }: HighlightKeywordsProps) => {
+    if (!keywords && !text) return (<div>Loading Description...</div>) 
+
     const splitText = text.split(" ")
     const splitKeywords = keywords.split(" ")
     const isKeyword = (word: string) => { return splitKeywords.includes(word) }
