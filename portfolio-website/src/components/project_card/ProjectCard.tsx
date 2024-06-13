@@ -39,10 +39,8 @@ export const ProjectCard: Card = ({
         if (!innerRef.current) return;
 
         const rect = innerRef.current?.getBoundingClientRect();
-        const xVal =
-            (event.clientX - (rect.left + rect.width / 2)) / (rect.width / 2);
-        const yVal =
-            (event.clientY - (rect.top + rect.height / 2)) / (rect.height / 2);
+        const xVal = (event.clientX - (rect.left + rect.width / 2)) / (rect.width / 2);
+        const yVal = (event.clientY - (rect.top + rect.height / 2)) / (rect.height / 2);
         x.set(xVal);
         y.set(yVal);
 

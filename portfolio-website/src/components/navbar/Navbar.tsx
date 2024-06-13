@@ -36,9 +36,7 @@ export const Navbar = ({ title, navLinks }: NavbarProps) => {
                         <li key={link.path}>
                             <NavLink
                                 to={link.path}
-                                className={({ isActive }) =>
-                                    isActive ? "active" : ""
-                                }
+                                className={({ isActive }) => isActive ? "active" : ""}
                             >
                                 {link.title}
                             </NavLink>

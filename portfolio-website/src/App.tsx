@@ -25,10 +25,19 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Navbar title="Efai De Leon's Portfolio" navLinks={navLinks}/>
+      <Navbar title="Efai De Leon's Portfolio" navLinks={navLinks} />
       <Routes>
         <Route path="/Portfolio-Website/" element={<Home data={data} />} />
-        <Route path="/contact/" element={<Contact name={contactData.name} email={contactData.email} phone={contactData.phone} />} />
+        <Route
+          path="/contact/"
+          element={
+            <Contact
+              name={contactData.name}
+              email={contactData.email}
+              phone={contactData.phone}
+            />
+          }
+        />
       </Routes>
     </BrowserRouter>
   )

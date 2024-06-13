@@ -3,8 +3,8 @@ import { useState, useEffect } from "react";
 
 export function useFetchCSVData<T>(url: string) {
     const [data, setData] = useState<T[]>([]);
-    const [loading, setLoading] = useState(true);
     const [error, setError] = useState<Error | null>(null);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const fetchData = async () => {
